@@ -1,0 +1,36 @@
+{
+  "color": "",
+  "generation_one": {
+    "type_effects": {
+      "strike": {
+        "zero": [],
+        "half": ["bug", "poison", "flying", "fire", "grass", "dragon", "steel"],
+        "double": ["ground", "water", "rock"],
+      },
+      "be_struck": {
+        "double": ["bug", "poison", "flying", "fire", "ice"],
+        "half": ["ground", "water", "electric", "grass"],
+        "zero": []
+      }
+    },
+  },
+  "generation_two": {
+    "type_effects": {
+      "strike": {
+        "zero": [],
+        "half": ["bug", "poison", "flying", "fire", "grass", "dragon", "steel"],
+        "double": ["ground", "water", "rock"],
+      },
+      "be_struck": {
+        "double": ["bug", "poison", "flying", "fire", "ice"],
+        "half": ["ground", "water", "electric", "grass"],
+        "zero": [],
+      }
+    },
+  },
+  "generation_three": {},
+  "generation_four": {},
+  "generation_five": {},
+  "generation_six": {},
+  "generation_seven": {},
+}

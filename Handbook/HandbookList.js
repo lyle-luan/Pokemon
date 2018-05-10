@@ -1,6 +1,6 @@
 import React from 'react';
 import {SectionList, StyleSheet, Text, View, Image} from 'react-native';
-import I18n from 'react-native-i18n';
+import I18n from '../i18n/i18n';
 
 export class HandbookList extends React.Component{
   render () {

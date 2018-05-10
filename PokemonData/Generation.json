@@ -1,0 +1,30 @@
+{
+  "generation": {
+    "generation_one": {
+      "pokemon_list": [
+        {
+          "pokemon_id": "000001",
+        },
+        {
+          "pokemon_id": "000002",
+        },
+        {
+          "pokemon_id": "000003",
+        },
+      ]
+    },
+    "generation_two": {
+      "pokemon_list": [
+        {
+          "pokemon_id": "000152",
+        },
+        {
+          "pokemon_id": "000153",
+        },
+        {
+          "pokemon_id": "000154",
+        },
+      ]
+    },
+  }
+}
