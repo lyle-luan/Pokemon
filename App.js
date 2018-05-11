@@ -14,8 +14,8 @@
 
  export default createBottomTabNavigator (
    {
-     Pokemm: pokemmStack,
      Handbook: handbookStack,
+     Pokemm: pokemmStack,
      Tools: toolsStack,
      Mine: mineStack,
    }

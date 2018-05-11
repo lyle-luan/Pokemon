@@ -20,31 +20,5 @@
   "catch_rate": 45,
   "category": "seed",
   "height": "0.7m (2'04\")",
-  "weight": "6.9kg (15.2lbs)",
-  "race_value": {
-    "hp": 45,
-    "attack": 49,
-    "defense": 49,
-    "sp_atk": 65,
-    "sp_def": 65,
-    "speed": 45,
-  },
-  "be_struck":{},
-  "carry_items": {"bitter_berry"},
-  "evolution" : [{
-    "requirements": {
-      "level": 16,
-      "carry_item": null,
-      "condition": null,
-    },
-    "pokemon_id": "000002",
-  }],
-  "Move": {
-    "level_up":[{"level": 0,"move_id": "zhuangji"},
-                {"level": 3,"move_id": "zhuangji"}],
-    "tm_hm": [],
-    "breeding": [],
-    "tutor": [],
-  },
-  "locations": [{},{}]
+  "weight": "6.9kg (15.2lbs)"
 }

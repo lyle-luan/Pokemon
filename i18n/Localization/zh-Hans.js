@@ -1,6 +1,6 @@
 export default {
-  generationOne: '第一世代',
-  generationTwo: '第二世代',
+  gen_one: '第一世代',
+  gen_two: '第二世代',
 
 
 
