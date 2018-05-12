@@ -4,20 +4,24 @@ import I18n from '../i18n/i18n';
 
 export class HandbookListItem extends React.Component {
   render () {
+     let pokemon = this.props.pokemon;
 
-    let pokemonPath = '../PokemonData/Pokemons/'+this.props.pokemonID+'.json';
-    let pokemonData = require('../PokemonData/Pokemons/000001.json');
+     let hp = pokemon.race_value.hp;
+     let attack = pokemon.race_value.attack;
+     let defense = pokemon.race_value.defense;
+     let sp_atk = pokemon.race_value.sp_atk;
+     let sp_def = pokemon.race_value.sp_def;
+     let speed = pokemon.race_value.speed;
+     let raceValue = hp+attack+defense+sp_atk+sp_def+speed;
 
     return (
-
-
       <View>
-
-        <Text>{pokemonData.name}</Text>
+        {/* <Image source={require('./PokemonData/Image/Normal/miaowazhongzi.png')}/> */}
+        <Text>{pokemon.name}</Text>
+        <Text>{this.props.pokemonID}</Text>
+        <Text>{raceValue}</Text>
+        <Text>{pokemon.type}</Text>
       </View>
-
-        //通过 state/props 来初始化控件
-        //引入图片
     );
   }
 }

@@ -1,0 +1,98 @@
+{
+  "a000001": {
+    "name": "miaowazhongzi",
+    "type": ["grass", "poison"],
+    "race_value": {
+      "hp": 45,
+      "attack": 49,
+      "defense": 49,
+      "sp_atk": 65,
+      "sp_def": 65,
+      "speed": 45
+    }
+  },
+  "a000002": {
+    "name": "miaowacao",
+    "type": ["grass", "poison"],
+    "race_value": {
+      "hp": 60,
+      "attack": 62,
+      "defense": 63,
+      "sp_atk": 80,
+      "sp_def": 80,
+      "speed": 60
+    }
+  },
+  "a000003": {
+    "name": "miaowahua",
+    "type": ["grass", "poison"],
+    "race_value": {
+      "hp": 80,
+      "attack": 82,
+      "defense": 83,
+      "sp_atk": 100,
+      "sp_def": 100,
+      "speed": 80
+    }
+  },
+  "a000004": {
+    "name": "xiaohuolong",
+    "type": ["fire"],
+    "race_value": {
+      "hp": 39,
+      "attack": 52,
+      "defense": 43,
+      "sp_atk": 60,
+      "sp_def": 50,
+      "speed": 65
+    }
+  },
+  "a000152": {
+    "name": "juyecao",
+    "type": ["grass"],
+    "race_value": {
+      "hp": 45,
+      "attack": 49,
+      "defense": 65,
+      "sp_atk": 49,
+      "sp_def": 65,
+      "speed": 45
+    }
+  },
+  "a000153": {
+    "name": "yueguiye",
+    "type": ["grass"],
+    "race_value": {
+      "hp": 60,
+      "attack": 62,
+      "defense": 80,
+      "sp_atk": 63,
+      "sp_def": 80,
+      "speed": 60
+    }
+  },
+  "a000154": {
+    "name": "dazhukui",
+    "type": ["grass"],
+    "race_value": {
+      "hp": 80,
+      "attack": 82,
+      "defense": 100,
+      "sp_atk": 83,
+      "sp_def": 100,
+      "speed": 80
+    }
+  },
+  "a000155": {
+    "name": "huoqiushu",
+    "type": ["fire"],
+    "race_value": {
+      "hp": 39,
+      "attack": 52,
+      "defense": 43,
+      "sp_atk": 60,
+      "sp_def": 50,
+      "speed": 65
+    }
+  }
+}
