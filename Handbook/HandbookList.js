@@ -32,17 +32,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     backgroundColor: 'rgba(247,247,247,1.0)',
   },
-})
-
-I18n.fallbacks = true;
-
-I18n.translations = {
-  en: {
-    generationOne: 'Generation Ⅰ',
-    generationTwo: 'Generation Ⅱ',
-  },
-  'zh-Hans': {
-    generationOne: '第一世代',
-    generationTwo: '第二世代',
-  },
-};
+});

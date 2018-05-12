@@ -15,12 +15,16 @@ export class HandbookListItem extends React.Component {
      let raceValue = hp+attack+defense+sp_atk+sp_def+speed;
 
     return (
-      <View>
-        {/* <Image source={require('./PokemonData/Image/Normal/miaowazhongzi.png')}/> */}
-        <Text>{pokemon.name}</Text>
-        <Text>{this.props.pokemonID}</Text>
-        <Text>{raceValue}</Text>
-        <Text>{pokemon.type}</Text>
+      <View style={{flex:1, flexDirection:'row'}}>
+        <Image source={{uri: 'miaowazhongzi'}} style={{width: 90, height: 90}} />
+        <View style={{flex:1, flexDirection:'column', justifyContent: 'center'}}>
+          <Text>{I18n.t(pokemon.name)}</Text>
+          <Text>{I18n.t('race_value') + raceValue}</Text>
+          <Text>{pokemon.type}</Text>
+        </View>
+        <View style={{flex:1, flexDirection:'column',alignItems:'flex-end'}}>
+          <Text>{this.props.pokemonID}</Text>
+        </View>
       </View>
     );
   }
