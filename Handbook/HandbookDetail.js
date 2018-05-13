@@ -1,7 +1,8 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image, ScrollView} from 'react-native';
 import I18n from '../i18n/i18n';
 import {createStackNavigator,} from 'react-navigation';
+import {NameIDCell} from './DetailCells/NameIDCell';
 
 export class HandbookDetail extends React.Component{
 
@@ -11,10 +12,10 @@ export class HandbookDetail extends React.Component{
     console.log('pokemon: '+pokemon);
 
     return (
-      <View style={styles.container}>
-        <Image source={{uri: pokemon.image}} style={{width: 90, height: 90}} />
-        <Text>{I18n.t(pokemon.name)}</Text>
-      </View>
+      <ScrollView style={styles.container}>
+        <Image source={{uri: pokemon.image}} style={{width: 180, height: 180}} />
+        <NameIDCell name={pokemon.name} id={pokemon.id} />
+      </ScrollView>
     );
   }
 }
