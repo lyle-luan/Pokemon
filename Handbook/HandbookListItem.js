@@ -1,14 +1,23 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableHighlight} from 'react-native';
 import I18n from '../i18n/i18n';
 import {TypesView} from './TypesView';
+import Pokemons from '../PokemonData/Pokemons.json';
 
 export class HandbookListItem extends React.Component {
-  render () {
-     let pokemon = this.props.pokemon;
 
-     let name = this.props.pokemonID;
+   showPokemonDetail = (pokemon) => {
+     this.props.handler(pokemon);
+   };
+
+  render () {
+     let pokemon = Pokemons[this.props.pokemonID];
+
      let id = '#'+this.props.pokemonID.split('_')[0].substring(1);
+
+     pokemon.name = this.props.pokemonID;
+     pokemon.image = this.props.pokemonID;
+     pokemon.id = id;
 
      let hp = pokemon.race_value.hp;
      let attack = pokemon.race_value.attack;
@@ -18,18 +27,22 @@ export class HandbookListItem extends React.Component {
      let speed = pokemon.race_value.speed;
      let raceValue = hp+attack+defense+sp_atk+sp_def+speed;
 
+     pokemon.raceValue = raceValue;
+
     return (
-      <View style={{flex:1, flexDirection:'row'}}>
-        <Image source={{uri: this.props.pokemonID}} style={{width: 90, height: 90}} />
-        <View style={{flex:1, flexDirection:'column', justifyContent: 'center'}}>
-          <Text>{I18n.t(this.props.pokemonID)}</Text>
-          <Text>{I18n.t('race_value') + raceValue}</Text>
-          <TypesView types={pokemon.type}/>
+      <TouchableHighlight style={{flex:1}} onPress={this.showPokemonDetail}>
+        <View style={{flex:1, flexDirection:'row'}}>
+          <Image source={{uri: pokemon.image}} style={{width: 90, height: 90}} />
+          <View style={{flex:1, flexDirection:'column', justifyContent: 'center'}}>
+            <Text>{I18n.t(pokemon.name)}</Text>
+            <Text>{I18n.t('race_value') + pokemon.raceValue}</Text>
+            <TypesView types={pokemon.type}/>
+          </View>
+          <View style={{flex:1, flexDirection:'column',alignItems:'flex-end'}}>
+            <Text>{id}</Text>
+          </View>
         </View>
-        <View style={{flex:1, flexDirection:'column',alignItems:'flex-end'}}>
-          <Text>{id}</Text>
-        </View>
-      </View>
+      </TouchableHighlight>
     );
   }
 }

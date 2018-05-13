@@ -19,7 +19,6 @@ class TypeView extends React.Component {
 export class TypesView extends React.Component {
   render () {
     let types = this.props.types;
-    console.log('types:'+types);
     return (
       <View style={{flex:1, flexDirection:'row'}}>
         {types.map((type)=>(
