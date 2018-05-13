@@ -4,12 +4,12 @@ export default {
 
   race_value: '种族值',
 
-  miaowazhongzi: '妙蛙种子',
-  miaowacao: '妙蛙草',
-  miaowahua: '妙蛙花',
-  xiaohuolong: '小火龙',
-  juyecao: '菊叶草',
-  yueguiye: '月桂叶',
-  dazhukui: '大竺葵',
-  huoqiushu: '火球鼠',
+  a001_miaowazhongzi: '妙蛙种子',
+  a002_miaowacao: '妙蛙草',
+  a003_miaowahua: '妙蛙花',
+  a004_xiaohuolong: '小火龙',
+  a152_juyecao: '菊叶草',
+  a153_yueguiye: '月桂叶',
+  a154_dazhukui: '大竺葵',
+  a155_huoqiushu: '火球鼠',
 };

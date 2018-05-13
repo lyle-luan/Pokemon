@@ -1,6 +1,5 @@
 {
-  "a000001": {
-    "name": "miaowazhongzi",
+  "a001_miaowazhongzi": {
     "type": ["grass", "poison"],
     "race_value": {
       "hp": 45,
@@ -11,8 +10,7 @@
       "speed": 45
     }
   },
-  "a000002": {
-    "name": "miaowacao",
+  "a002_miaowacao": {
     "type": ["grass", "poison"],
     "race_value": {
       "hp": 60,
@@ -23,8 +21,7 @@
       "speed": 60
     }
   },
-  "a000003": {
-    "name": "miaowahua",
+  "a003_miaowahua": {
     "type": ["grass", "poison"],
     "race_value": {
       "hp": 80,
@@ -35,8 +32,7 @@
       "speed": 80
     }
   },
-  "a000004": {
-    "name": "xiaohuolong",
+  "a004_xiaohuolong": {
     "type": ["fire"],
     "race_value": {
       "hp": 39,
@@ -47,8 +43,7 @@
       "speed": 65
     }
   },
-  "a000152": {
-    "name": "juyecao",
+  "a152_juyecao": {
     "type": ["grass"],
     "race_value": {
       "hp": 45,
@@ -59,8 +54,7 @@
       "speed": 45
     }
   },
-  "a000153": {
-    "name": "yueguiye",
+  "a153_yueguiye": {
     "type": ["grass"],
     "race_value": {
       "hp": 60,
@@ -71,8 +65,7 @@
       "speed": 60
     }
   },
-  "a000154": {
-    "name": "dazhukui",
+  "a154_dazhukui": {
     "type": ["grass"],
     "race_value": {
       "hp": 80,
@@ -83,8 +76,7 @@
       "speed": 80
     }
   },
-  "a000155": {
-    "name": "huoqiushu",
+  "a155_huoqiushu": {
     "type": ["fire"],
     "race_value": {
       "hp": 39,

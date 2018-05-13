@@ -3,7 +3,7 @@ import {SectionList, StyleSheet, Text, View, Image} from 'react-native';
 import I18n from '../i18n/i18n';
 import {HandbookListItem} from './HandbookListItem';
 import Generation from '../PokemonData/Generation.json';
-import jsonData from '../PokemonData/Pokemons.json'
+import Pokemons from '../PokemonData/Pokemons.json'
 
 export class HandbookList extends React.Component{
 
@@ -16,7 +16,7 @@ export class HandbookList extends React.Component{
             {title: I18n.t('gen_one'), data: Generation.gen_one},
             {title: I18n.t('gen_two'), data: Generation.gen_two},
           ]}
-          renderItem={({item})=><HandbookListItem pokemon={jsonData[item.key]} pokemonID={item.key}/>}
+          renderItem={({item})=><HandbookListItem pokemon={Pokemons[item.key]} pokemonID={item.key}/>}
           renderSectionHeader={({section})=><Text style={styles.sectionHeader}>{section.title}</Text>} />
       </View>
     );
