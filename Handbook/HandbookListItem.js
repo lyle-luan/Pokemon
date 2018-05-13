@@ -1,13 +1,14 @@
 import React from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
 import I18n from '../i18n/i18n';
+import {TypesView} from './TypesView';
 
 export class HandbookListItem extends React.Component {
   render () {
      let pokemon = this.props.pokemon;
 
      let name = this.props.pokemonID;
-     let id = this.props.pokemonID;
+     let id = '#'+this.props.pokemonID.split('_')[0].substring(1);
 
      let hp = pokemon.race_value.hp;
      let attack = pokemon.race_value.attack;
@@ -19,11 +20,11 @@ export class HandbookListItem extends React.Component {
 
     return (
       <View style={{flex:1, flexDirection:'row'}}>
-        <Image source={{uri: 'miaowazhongzi'}} style={{width: 90, height: 90}} />
+        <Image source={{uri: this.props.pokemonID}} style={{width: 90, height: 90}} />
         <View style={{flex:1, flexDirection:'column', justifyContent: 'center'}}>
           <Text>{I18n.t(this.props.pokemonID)}</Text>
           <Text>{I18n.t('race_value') + raceValue}</Text>
-          <Text>{pokemon.type}</Text>
+          <TypesView types={pokemon.type}/>
         </View>
         <View style={{flex:1, flexDirection:'column',alignItems:'flex-end'}}>
           <Text>{id}</Text>

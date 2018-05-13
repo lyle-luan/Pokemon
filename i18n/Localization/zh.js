@@ -12,4 +12,8 @@ export default {
   a153_yueguiye: '月桂叶',
   a154_dazhukui: '大竺葵',
   a155_huoqiushu: '火球鼠',
+
+  grass: '草',
+  poison: '毒',
+  fire: '火',
 };
