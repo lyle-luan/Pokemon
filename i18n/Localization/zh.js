@@ -3,6 +3,7 @@ export default {
   gen_two: '第二世代',
 
   race_value: '种族值',
+  type: '属性',
 
   a001_miaowazhongzi: '妙蛙种子',
   a002_miaowacao: '妙蛙草',
