@@ -7,14 +7,11 @@ import {createStackNavigator,} from 'react-navigation';
 
 export class HandbookList extends React.Component{
 
-
    showPokemonDetail = (pokemon) => {
-       console.log('show pokemon detail');
-       this.props.navigation.navigate('HandbookDetail')
+       this.props.navigation.navigate('HandbookDetail', {pokemon:pokemon})
    };
 
   render () {
-
     return (
       <View style={styles.container}>
         <SectionList

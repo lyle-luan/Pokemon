@@ -5,12 +5,9 @@ import {TypesView} from './TypesView';
 import Pokemons from '../PokemonData/Pokemons.json';
 
 export class HandbookListItem extends React.Component {
+  constructor(props) {
+    super(props);
 
-   showPokemonDetail = (pokemon) => {
-     this.props.handler(pokemon);
-   };
-
-  render () {
      let pokemon = Pokemons[this.props.pokemonID];
 
      let id = '#'+this.props.pokemonID.split('_')[0].substring(1);
@@ -29,6 +26,16 @@ export class HandbookListItem extends React.Component {
 
      pokemon.raceValue = raceValue;
 
+    this.state = {pokemon: pokemon};
+  }
+
+   showPokemonDetail = () => {
+     this.props.handler(this.state.pokemon);
+   };
+
+  render () {
+    let pokemon = this.state.pokemon;
+
     return (
       <TouchableHighlight style={{flex:1}} onPress={this.showPokemonDetail}>
         <View style={{flex:1, flexDirection:'row'}}>
@@ -39,7 +46,7 @@ export class HandbookListItem extends React.Component {
             <TypesView types={pokemon.type}/>
           </View>
           <View style={{flex:1, flexDirection:'column',alignItems:'flex-end'}}>
-            <Text>{id}</Text>
+            <Text>{pokemon.id}</Text>
           </View>
         </View>
       </TouchableHighlight>
