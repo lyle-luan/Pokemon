@@ -4,6 +4,8 @@ export default {
 
   race_value: '种族值',
   type: '属性',
+  ability: '特性',
+  hidden_ability: '隐藏特性',
 
   a001_miaowazhongzi: '妙蛙种子',
   a002_miaowacao: '妙蛙草',
@@ -17,4 +19,11 @@ export default {
   grass: '草',
   poison: '毒',
   fire: '火',
+
+  overgrow: '茂盛',
+  chlorophyll: '叶绿素',
+  blaze: '猛火',
+  solarpower: '太阳之力',
+  leafguard: '叶子防守',
+  flashfire: '引火',
 };

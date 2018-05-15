@@ -8,7 +8,9 @@
       "sp_atk": 65,
       "sp_def": 65,
       "speed": 45
-    }
+    },
+    "ability": "overgrow",
+    "hidden_ability": "chlorophyll",
   },
   "a002_miaowacao": {
     "type": ["grass", "poison"],
@@ -19,7 +21,9 @@
       "sp_atk": 80,
       "sp_def": 80,
       "speed": 60
-    }
+    },
+    "ability": "overgrow",
+    "hidden_ability": "chlorophyll",
   },
   "a003_miaowahua": {
     "type": ["grass", "poison"],
@@ -30,7 +34,9 @@
       "sp_atk": 100,
       "sp_def": 100,
       "speed": 80
-    }
+    },
+    "ability": "overgrow",
+    "hidden_ability": "chlorophyll",
   },
   "a004_xiaohuolong": {
     "type": ["fire"],
@@ -41,7 +47,9 @@
       "sp_atk": 60,
       "sp_def": 50,
       "speed": 65
-    }
+    },
+    "ability": "blaze",
+    "hidden_ability": "solarpower",
   },
   "a152_juyecao": {
     "type": ["grass"],
@@ -52,7 +60,9 @@
       "sp_atk": 49,
       "sp_def": 65,
       "speed": 45
-    }
+    },
+    "ability": "overgrow",
+    "hidden_ability": "leafguard",
   },
   "a153_yueguiye": {
     "type": ["grass"],
@@ -63,7 +73,9 @@
       "sp_atk": 63,
       "sp_def": 80,
       "speed": 60
-    }
+    },
+    "ability": "overgrow",
+    "hidden_ability": "leafguard",
   },
   "a154_dazhukui": {
     "type": ["grass"],
@@ -74,7 +86,9 @@
       "sp_atk": 83,
       "sp_def": 100,
       "speed": 80
-    }
+    },
+    "ability": "overgrow",
+    "hidden_ability": "leafguard",
   },
   "a155_huoqiushu": {
     "type": ["fire"],
@@ -85,6 +99,8 @@
       "sp_atk": 60,
       "sp_def": 50,
       "speed": 65
-    }
+    },
+    "ability": "blaze",
+    "hidden_ability": "flashfire",
   }
 }
