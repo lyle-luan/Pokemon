@@ -10,7 +10,7 @@ export class TextCell extends React.Component {
       <View style={styles.container}>
         <Text>{I18n.t(title)}</Text>
         <View style={{flex:1, flexDirection:'row', justifyContent:'flex-end'}}>
-          <Text>{I18n.t(detail)}</Text>
+          <Text>{I18n.t(detail, {defaultValue: detail})}</Text>
         </View>
       </View>
     );
