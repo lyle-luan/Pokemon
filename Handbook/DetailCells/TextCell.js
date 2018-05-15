@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import I18n from '../../i18n/i18n';
 
 export class TextCell extends React.Component {
   render () {
@@ -7,9 +8,9 @@ export class TextCell extends React.Component {
     let detail = this.props.detail;
     return (
       <View style={styles.container}>
-        <Text>{title}</Text>
+        <Text>{I18n.t(title)}</Text>
         <View style={{flex:1, flexDirection:'row', justifyContent:'flex-end'}}>
-          <Text>{detail}</Text>
+          <Text>{I18n.t(detail)}</Text>
         </View>
       </View>
     );

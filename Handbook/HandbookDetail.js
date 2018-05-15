@@ -8,34 +8,39 @@ import {TextTouchableCell} from './DetailCells/TextTouchableCell'
 
 export class HandbookDetail extends React.Component{
 
-  showAbilityDetail = () => {
-    const pokemon = this.props.navigation.state.params.pokemon;
-    console.log('show ability: '+pokemon.ability);
+  showAbilityDetail = (ability) => {
+    // const pokemon = this.props.navigation.state.params.pokemon;
+    console.log('show ability: '+ability);
   };
 
-  showHiddenAbilityDetail = () => {
-    const pokemon = this.props.navigation.state.params.pokemon;
-    console.log('show hidden ability: '+pokemon.hiddenAbility);
+  showEggsGroupsDetail = (eggGroup) => {
+    console.log('show egg groups: '+eggGroup);
   };
 
   render () {
     const pokemon = this.props.navigation.state.params.pokemon;
 
-    var ability =  I18n.t(pokemon.ability)
+    var ability =  pokemon.ability
     var detailsHandlers = {};
-    detailsHandlers[ability] = this.showAbilityDetail.bind(this);
+    detailsHandlers[ability] = this.showAbilityDetail.bind(this, ability);
 
-    var hiddenAbility =  I18n.t(pokemon.hidden_ability)
+    var hiddenAbility =  pokemon.hidden_ability
     var hiddenDetailsHandlers = {};
-    hiddenDetailsHandlers[hiddenAbility] = this.showHiddenAbilityDetail.bind(this);
+    hiddenDetailsHandlers[hiddenAbility] = this.showAbilityDetail.bind(this, hiddenAbility);
+
+    var eggGroupsDetailsHandlers = {};
+    pokemon.egg_groups.map((eggGroup)=>(
+      eggGroupsDetailsHandlers[eggGroup] = this.showEggsGroupsDetail.bind(this, eggGroup)
+    ))
 
     return (
       <ScrollView style={styles.container}>
         <Image source={{uri: pokemon.image}} style={{width: 180, height: 180}} />
-        <TextCell title={I18n.t(pokemon.name)} detail={pokemon.id} />
+        <TextCell title={pokemon.name} detail={pokemon.id} />
         <TypeCell types={pokemon.type} />
-        <TextTouchableCell title={I18n.t('ability')} details={detailsHandlers} />
-        <TextTouchableCell title={I18n.t('hidden_ability')} details={hiddenDetailsHandlers} />
+        <TextTouchableCell title={'ability'} details={detailsHandlers} />
+        <TextTouchableCell title={'hidden_ability'} details={hiddenDetailsHandlers} />
+        <TextTouchableCell title={'egg_groups'} details={eggGroupsDetailsHandlers}/>
       </ScrollView>
     );
   }

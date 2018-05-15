@@ -11,6 +11,7 @@
     },
     "ability": "overgrow",
     "hidden_ability": "chlorophyll",
+    "egg_groups": ["monster", "egg_grass"],
   },
   "a002_miaowacao": {
     "type": ["grass", "poison"],
@@ -24,6 +25,7 @@
     },
     "ability": "overgrow",
     "hidden_ability": "chlorophyll",
+    "egg_groups": ["monster", "egg_grass"],
   },
   "a003_miaowahua": {
     "type": ["grass", "poison"],
@@ -37,6 +39,7 @@
     },
     "ability": "overgrow",
     "hidden_ability": "chlorophyll",
+    "egg_groups": ["monster", "egg_grass"],
   },
   "a004_xiaohuolong": {
     "type": ["fire"],
@@ -50,6 +53,7 @@
     },
     "ability": "blaze",
     "hidden_ability": "solarpower",
+    "egg_groups": ["monster", "dragon"],
   },
   "a152_juyecao": {
     "type": ["grass"],
@@ -63,6 +67,7 @@
     },
     "ability": "overgrow",
     "hidden_ability": "leafguard",
+    "egg_groups": ["monster", "egg_grass"],
   },
   "a153_yueguiye": {
     "type": ["grass"],
@@ -76,6 +81,7 @@
     },
     "ability": "overgrow",
     "hidden_ability": "leafguard",
+    "egg_groups": ["monster", "egg_grass"],
   },
   "a154_dazhukui": {
     "type": ["grass"],
@@ -89,6 +95,7 @@
     },
     "ability": "overgrow",
     "hidden_ability": "leafguard",
+    "egg_groups": ["monster", "egg_grass"],
   },
   "a155_huoqiushu": {
     "type": ["fire"],
@@ -102,5 +109,6 @@
     },
     "ability": "blaze",
     "hidden_ability": "flashfire",
+    "egg_groups": ["field"],
   }
 }

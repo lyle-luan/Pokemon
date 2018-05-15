@@ -6,6 +6,7 @@ export default {
   type: '属性',
   ability: '特性',
   hidden_ability: '隐藏特性',
+  egg_groups: '蛋组',
 
   a001_miaowazhongzi: '妙蛙种子',
   a002_miaowacao: '妙蛙草',
@@ -26,4 +27,9 @@ export default {
   solarpower: '太阳之力',
   leafguard: '叶子防守',
   flashfire: '引火',
+
+  monster: '怪兽',
+  egg_grass: '植物',
+  filed: '陆上',
+  dragon: '龙'
 };
