@@ -6,6 +6,7 @@ import {TextCell} from './DetailCells/TextCell';
 import {TypeCell} from './DetailCells/TypeCell';
 import {TextTouchableCell} from './DetailCells/TextTouchableCell'
 import Pokemons from '../PokemonData/Pokemons.json';
+import {EvolutionCell} from './DetailCells/EvolutionCell'
 
 export class HandbookDetail extends React.Component{
 
@@ -61,6 +62,7 @@ export class HandbookDetail extends React.Component{
         <TextCell title={'category'} detail={pokemon.category} />
         <TextCell title={'height'} detail={pokemon.height} />
         <TextCell title={'weight'} detail={pokemon.weight} />
+        <EvolutionCell pokemonID={pokemon.evolution} />
       </ScrollView>
     );
   }

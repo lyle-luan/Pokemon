@@ -21,6 +21,7 @@ export default {
   category: '分类',
   height: '身高',
   weight: '体重',
+  level: '等级',
 
   sp_atk: '特攻',
 
