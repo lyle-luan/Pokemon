@@ -12,7 +12,7 @@ export class TextTouchableCell extends React.Component {
         <Text>{I18n.t(title)}</Text>
         <View style={{flex:1, flexDirection:'row', justifyContent:'flex-end'}}>
           {
-            Object.entries(details).map(([detail, handler]) => <Button title={I18n.t(detail)} onPress={handler}/>)
+            Object.entries(details).map(([detail, handler]) => <Button title={I18n.t(detail, {defaultValue: detail})} onPress={handler}/>)
           }
         </View>
       </View>
