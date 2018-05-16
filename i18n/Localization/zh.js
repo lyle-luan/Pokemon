@@ -22,6 +22,15 @@ export default {
   height: '身高',
   weight: '体重',
   level: '等级',
+  statistic_range: '能力值范围',
+  level50: '50级时',
+  level100: '100级时',
+  attack: '攻击',
+  defense: '防御',
+  sp_atk: '特攻',
+  sp_def: '特防',
+  speed: '速度',
+
 
   sp_atk: '特攻',
 
