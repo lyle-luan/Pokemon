@@ -122,6 +122,7 @@ export class RaceValueCell extends React.Component {
     let sp_atk = this.props.sp_atk;
     let sp_def = this.props.sp_def;
     let speed = this.props.speed;
+    let total = hp+attack+defense+sp_atk+sp_def+speed;
 
     return (
       <View style={{flex:1, flexDirection: 'column'}}>
@@ -132,6 +133,9 @@ export class RaceValueCell extends React.Component {
         <RowViewNotHP style={{flex:1}} title={'sp_atk'} race_value={sp_atk} color={'red'} />
         <RowViewNotHP style={{flex:1}} title={'sp_def'} race_value={sp_def} color={'red'} />
         <RowViewNotHP style={{flex:1}} title={'speed'} race_value={speed} color={'red'} />
+        <View style={{flex:1}}>
+          <Text>{I18n.t('total')+': '+total}</Text>
+        </View>
       </View>
     );
   }

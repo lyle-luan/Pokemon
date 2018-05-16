@@ -30,6 +30,7 @@ export default {
   sp_atk: '特攻',
   sp_def: '特防',
   speed: '速度',
+  total: '总和',
 
 
   sp_atk: '特攻',
