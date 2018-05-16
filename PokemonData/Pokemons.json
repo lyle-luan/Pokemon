@@ -1,5 +1,9 @@
 {
   "a001_miaowazhongzi": {
+    "id": "a001_miaowazhongzi",
+    "name": "a001_miaowazhongzi",
+    "image": "a001_miaowazhongzi",
+    "sn": "001",
     "type": ["grass", "poison"],
     "race_value": {
       "hp": 45,
@@ -21,13 +25,18 @@
     "hatch_time_step": "5120",
     "gender_ratio_male": "87.5",
     "gender_ratio_female": "12.5",
-    "sex_diff": "a001_miaowazhongzi_sex_diff",
+    "sex_diff": "sex_diff",
     "catch_rate": "45",
     "category": "seed",
     "height": "0.7m (2'04\")",
     "weight": "6.9kg (15.2lbs)",
+    "evolution" : "a001_miaowazhongzi",
   },
   "a002_miaowacao": {
+    "id": "a002_miaowacao",
+    "name": "a002_miaowacao",
+    "image": "a002_miaowacao",
+    "sn": "001",
     "type": ["grass", "poison"],
     "race_value": {
       "hp": 60,
@@ -42,6 +51,10 @@
     "egg_groups": ["monster", "egg_grass"],
   },
   "a003_miaowahua": {
+    "id": "a003_miaowahua",
+    "name": "a003_miaowahua",
+    "image": "a003_miaowahua",
+    "sn": "001",
     "type": ["grass", "poison"],
     "race_value": {
       "hp": 80,
@@ -56,6 +69,10 @@
     "egg_groups": ["monster", "egg_grass"],
   },
   "a004_xiaohuolong": {
+    "id": "a004_xiaohuolong",
+    "name": "a004_xiaohuolong",
+    "image": "a004_xiaohuolong",
+    "sn": "001",
     "type": ["fire"],
     "race_value": {
       "hp": 39,
@@ -70,6 +87,10 @@
     "egg_groups": ["monster", "dragon"],
   },
   "a152_juyecao": {
+    "id": "a152_juyecao",
+    "name": "a152_juyecao",
+    "image": "a152_juyecao",
+    "sn": "001",
     "type": ["grass"],
     "race_value": {
       "hp": 45,
@@ -84,6 +105,10 @@
     "egg_groups": ["monster", "egg_grass"],
   },
   "a153_yueguiye": {
+    "id": "a153_yueguiye",
+    "name": "a153_yueguiye",
+    "image": "a153_yueguiye",
+    "sn": "001",
     "type": ["grass"],
     "race_value": {
       "hp": 60,
@@ -98,6 +123,10 @@
     "egg_groups": ["monster", "egg_grass"],
   },
   "a154_dazhukui": {
+    "id": "a154_dazhukui",
+    "name": "a154_dazhukui",
+    "image": "a154_dazhukui",
+    "sn": "001",
     "type": ["grass"],
     "race_value": {
       "hp": 80,
@@ -112,6 +141,10 @@
     "egg_groups": ["monster", "egg_grass"],
   },
   "a155_huoqiushu": {
+    "id": "a155_huoqiushu",
+    "name": "a155_huoqiushu",
+    "image": "a155_huoqiushu",
+    "sn": "001",
     "type": ["fire"],
     "race_value": {
       "hp": 39,

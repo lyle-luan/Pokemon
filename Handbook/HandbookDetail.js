@@ -5,6 +5,7 @@ import {createStackNavigator,} from 'react-navigation';
 import {TextCell} from './DetailCells/TextCell';
 import {TypeCell} from './DetailCells/TypeCell';
 import {TextTouchableCell} from './DetailCells/TextTouchableCell'
+import Pokemons from '../PokemonData/Pokemons.json';
 
 export class HandbookDetail extends React.Component{
 
@@ -55,7 +56,7 @@ export class HandbookDetail extends React.Component{
         <TextTouchableCell title={'egg_groups'} details={eggGroupsDetailsHandlers}/>
         <TextCell title={'egg_cycle'} detail={pokemon.hatch_time_cycle+I18n.t('egg_cycle')+'('+pokemon.hatch_time_step+I18n.t('step')+')'} />
         <TextCell title={'gender_ratio'} detail={pokemon.gender_ratio_male+'%'+I18n.t('male')+pokemon.gender_ratio_female+'%'+I18n.t('female')} />
-        <TextCell title={'sex_diff'} detail={pokemon.sex_diff} />
+        <TextCell title={'sex_diff'} detail={pokemon.id+'_'+pokemon.sex_diff} />
         <TextTouchableCell title={'catch_rate'} details={catchRateHandlers}/>
         <TextCell title={'category'} detail={pokemon.category} />
         <TextCell title={'height'} detail={pokemon.height} />

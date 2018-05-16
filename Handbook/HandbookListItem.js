@@ -10,12 +10,6 @@ export class HandbookListItem extends React.Component {
 
      let pokemon = Pokemons[this.props.pokemonID];
 
-     let id = '#'+this.props.pokemonID.split('_')[0].substring(1);
-
-     pokemon.name = this.props.pokemonID;
-     pokemon.image = this.props.pokemonID;
-     pokemon.id = id;
-
      let hp = pokemon.race_value.hp;
      let attack = pokemon.race_value.attack;
      let defense = pokemon.race_value.defense;
@@ -46,7 +40,7 @@ export class HandbookListItem extends React.Component {
             <TypesView types={pokemon.type}/>
           </View>
           <View style={{flex:1, flexDirection:'column',alignItems:'flex-end'}}>
-            <Text>{pokemon.id}</Text>
+            <Text>{'#'+pokemon.sn}</Text>
           </View>
         </View>
       </TouchableHighlight>

@@ -1,0 +1,13 @@
+{
+  "a001_miaowazhongzi": [{
+    "pokemon_id": "a002_miaowacao",
+    "level": "16",
+    "carry_item": null,
+    "condition": null
+  }, {
+    "pokemon_id": "a003_miaowahua",
+    "level": "32",
+    "carry_item": null,
+    "condition": null
+  }]
+}
