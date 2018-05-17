@@ -39,7 +39,7 @@ export class HandbookListItem extends React.Component {
             <Text style={{color:'#888888', fontSize:15, fontWeight:'normal'}}>{I18n.t('race_value') + pokemon.raceValue}</Text>
             <TypesView style={{flex:1}} types={pokemon.type}/>
           </View>
-          <View>
+          <View style={{right:10}}>
             <Text style={{color:'#888888', fontSize:15, fontWeight:'normal'}}>{'#'+pokemon.sn}</Text>
           </View>
         </View>
