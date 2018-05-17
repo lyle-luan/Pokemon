@@ -7,12 +7,12 @@ const rowHeight = 30;
 class HeaderView extends React.Component {
   render () {
     return (
-      <View style={{flex:1, flexDirection: 'column', height: 88}}>
-        <View style={{flexDirection: 'row', alignItems: 'flex-start', height: 88}}>
-          <View style={{flex:6, flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: 88, borderColor: '#E9E9E9', borderBottomWidth: 1, borderRightWidth: 1, borderStyle: 'solid'}}>
+      <View style={{flex:1, flexDirection: 'column', height: 68}}>
+        <View style={{flexDirection: 'row', alignItems: 'flex-start', height: 68}}>
+          <View style={{flex:1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: 68, borderColor: '#E9E9E9', borderBottomWidth: 1, borderRightWidth: 1, borderStyle: 'solid'}}>
             <Text style={{color:'#353535', fontSize:20, fontWeight:'normal'}}>{I18n.t('race_value')}</Text>
           </View>
-          <View style={{flex:4, flexDirection: 'column'}}>
+          <View style={{width:140, flexDirection: 'column'}}>
             <View style={{flex:1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center', borderColor: '#E9E9E9', borderStyle: 'solid', borderBottomWidth: 1}}>
               <Text style={{color:'#353535', fontSize:20, fontWeight:'normal'}}>{I18n.t('statistic_range')}</Text>
             </View>
@@ -39,58 +39,52 @@ class RaceValueBar extends React.Component {
     let color = this.props.color;
     let clearValue = 100-value;
     return (
-      <View style={{flex:1, flexDirection: 'row'}}>
-        <View style={{flex:2, flexDirection: 'row'}}>
-          <Text>{title+': '+value}</Text>
+      <View style={{flex:1, flexDirection: 'row', borderColor: '#E9E9E9', borderRightWidth: 1, borderBottomWidth:1, borderStyle: 'solid'}}>
+        <View style={{width:60, flexDirection: 'column', justifyContent: 'center', alignItems:'flex-end'}}>
+          <Text style={{color:'#353535', fontSize:15, fontWeight:'normal'}} numberOfLines={1}>{title+': '+value}</Text>
         </View>
-        <View style={{flex:8, flexDirection: 'row'}}>
+        <View style={{flex:1,flexDirection: 'row'}}>
           <View style={{flex:value, backgroundColor: color}}></View>
-          <View style={{flex:clearValue, backgroundColor:'black'}}></View>
+          <View style={{flex:clearValue, backgroundColor:'white'}}></View>
         </View>
       </View>
     );
   }
 }
 
-class StatisticRange extends React.Component {
+class StatisticRange50 extends React.Component {
   render () {
     let min = this.props.min;
     let max = this.props.max;
     return (
       <View>
-        <Text>{min+'~'+max}</Text>
+        <View style={{width:70, height:34, flexDirection: 'column', justifyContent: 'center', alignItems:'center', borderColor: '#E9E9E9', borderRightWidth: 1, borderBottomWidth: 1, borderStyle: 'solid'}}>
+          <Text style={{color:'#353535', fontSize:15, fontWeight:'100'}}>{min+'~'+max}</Text>
+        </View>
       </View>
     );
   }
 }
 
-class RowViewHP extends React.Component {
+class StatisticRange100 extends React.Component {
+  render () {
+    let min = this.props.min;
+    let max = this.props.max;
+    return (
+      <View>
+        <View style={{width:70, height:34, flexDirection: 'column', justifyContent: 'center', alignItems:'center', borderColor: '#E9E9E9', borderBottomWidth: 1, borderStyle: 'solid'}}>
+          <Text style={{color:'#353535', fontSize:15, fontWeight:'100'}}>{min+'~'+max}</Text>
+        </View>
+      </View>
+    );
+  }
+}
+
+class RowView extends React.Component {
 
   calculateStatisticHP = (raceValue, baseStats, individualValues, level, naturePercent) => {
     return Math.floor((raceValue*2+baseStats/4+individualValues)*level/100+level+10);
   }
-
-  render () {
-    let title = this.props.title;
-    let raceValue = this.props.race_value;
-    let color = this.props.color;
-
-    let min50 = this.calculateStatisticHP(raceValue, 0, 0, 50, 0.9);
-    let max50 = this.calculateStatisticHP(raceValue, 252, 31, 50, 1.1);
-    let min100 = this.calculateStatisticHP(raceValue, 0, 0, 100, 0.9);
-    let max100 = this.calculateStatisticHP(raceValue, 252, 31, 100, 1.1);
-
-    return (
-      <View style={{flex:1, flexDirection: 'row'}}>
-        <RaceValueBar style={{flex:6}} title={I18n.t(title, {defaultValue: title})} value={raceValue} color={color} />
-        <StatisticRange style={{flex:2}} min={min50} max={max50}/>
-        <StatisticRange style={{flex:2}} min={min100} max={max100}/>
-      </View>
-    );
-  }
-}
-
-class RowViewNotHP extends React.Component {
 
   calculateStatisticNotHP = (raceValue, baseStats, individualValues, level, naturePercent) => {
     return Math.floor(((raceValue*2+baseStats/4+individualValues)*level/100+5)*naturePercent);
@@ -100,17 +94,31 @@ class RowViewNotHP extends React.Component {
     let title = this.props.title;
     let raceValue = this.props.race_value;
     let color = this.props.color;
+    let isHP = this.props.isHP;
 
-    let min50 = this.calculateStatisticNotHP(raceValue, 0, 0, 50, 0.9);
-    let max50 = this.calculateStatisticNotHP(raceValue, 252, 31, 50, 1.1);
-    let min100 = this.calculateStatisticNotHP(raceValue, 0, 0, 100, 0.9);
-    let max100 = this.calculateStatisticNotHP(raceValue, 252, 31, 100, 1.1);
+    let min50 = 0;
+    let max50 = 0;
+    let min100 = 0;
+    let max100 = 0;
+    if (isHP) {
+      min50 = this.calculateStatisticHP(raceValue, 0, 0, 50, 0.9);
+      max50 = this.calculateStatisticHP(raceValue, 252, 31, 50, 1.1);
+      min100 = this.calculateStatisticHP(raceValue, 0, 0, 100, 0.9);
+      max100 = this.calculateStatisticHP(raceValue, 252, 31, 100, 1.1);
+    }else{
+      min50 = this.calculateStatisticNotHP(raceValue, 0, 0, 50, 0.9);
+      max50 = this.calculateStatisticNotHP(raceValue, 252, 31, 50, 1.1);
+      min100 = this.calculateStatisticNotHP(raceValue, 0, 0, 100, 0.9);
+      max100 = this.calculateStatisticNotHP(raceValue, 252, 31, 100, 1.1);
+    }
 
     return (
-      <View style={{flex:1, flexDirection: 'row'}}>
+      <View style={{flexDirection: 'row', justifyContent: 'flex-start', height: 34}}>
         <RaceValueBar style={{flex:6}} title={I18n.t(title, {defaultValue: title})} value={raceValue} color={color} />
-        <StatisticRange style={{flex:2}} min={min50} max={max50}/>
-        <StatisticRange style={{flex:2}} min={min100} max={max100}/>
+        <View style={{width:140, flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center'}}>
+          <StatisticRange50 style={{flex:1}} min={min50} max={max50}/>
+          <StatisticRange100 style={{flex:1}} min={min100} max={max100}/>
+        </View>
       </View>
     );
   }
@@ -130,14 +138,14 @@ export class RaceValueCell extends React.Component {
     return (
       <View style={{flex:1, flexDirection: 'column'}}>
         <HeaderView style={{flex:2}} />
-        <RowViewHP style={{flex:1}} title={'HP'} race_value={hp} color={'red'} />
-        <RowViewNotHP style={{flex:1}} title={'attack'} race_value={attack} color={'red'} />
-        <RowViewNotHP style={{flex:1}} title={'defense'} race_value={defense} color={'red'} />
-        <RowViewNotHP style={{flex:1}} title={'sp_atk'} race_value={sp_atk} color={'red'} />
-        <RowViewNotHP style={{flex:1}} title={'sp_def'} race_value={sp_def} color={'red'} />
-        <RowViewNotHP style={{flex:1}} title={'speed'} race_value={speed} color={'red'} />
-        <View style={{flex:1}}>
-          <Text>{I18n.t('total')+': '+total}</Text>
+        <RowView style={{flex:1}} title={'HP'} isHP={true} race_value={hp} color={'red'} />
+        <RowView style={{flex:1}} title={'attack'} isHP={false} race_value={attack} color={'red'} />
+        <RowView style={{flex:1}} title={'defense'} isHP={false} race_value={defense} color={'red'} />
+        <RowView style={{flex:1}} title={'sp_atk'} isHP={false} race_value={sp_atk} color={'red'} />
+        <RowView style={{flex:1}} title={'sp_def'} isHP={false} race_value={sp_def} color={'red'} />
+        <RowView style={{flex:1}} title={'speed'} isHP={false} race_value={speed} color={'red'} />
+        <View style={{height:34, flexDirection: 'row', justifyContent: 'flex-start', alignItems:'center', borderColor: '#E9E9E9', borderBottomWidth: 1, borderStyle: 'solid'}}>
+          <Text style={{color:'#353535', fontSize:15, fontWeight:'normal'}}>{I18n.t('total')+': '+total}</Text>
         </View>
       </View>
     );
