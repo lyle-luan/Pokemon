@@ -21,6 +21,12 @@ export class HandbookList extends React.Component{
      );
    };
 
+   renderSectionSeparatorComponent = () => {
+     return (
+       <View style={{flex:1, height: 1, backgroundColor: '#E9E9E9'}}></View>
+     );
+   };
+
    sectionHeader = (item) => {
      return (
        <HandbookHeader title={item.section.title} />
@@ -36,6 +42,7 @@ export class HandbookList extends React.Component{
             {title: I18n.t('gen_two'), data: Generation.gen_two},
           ]}
           ItemSeparatorComponent = {this.renderItemSeparatorComponent}
+          SectionSeparatorComponent = {this.renderSectionSeparatorComponent}
           renderItem={({item})=><HandbookListItem pokemonID={item.key} handler={this.showPokemonDetail.bind(this)}/>}
           renderSectionHeader={this.sectionHeader} />
       </View>
