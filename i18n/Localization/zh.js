@@ -2,6 +2,8 @@ export default {
   gen_one: '第一世代',
   gen_two: '第二世代',
 
+  handbook: '图鉴',
+
   race_value: '种族值',
   type: '属性',
   ability: '特性',

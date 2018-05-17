@@ -8,6 +8,17 @@ import {HandbookHeader,} from './HandbookHeader';
 
 export class HandbookList extends React.Component{
 
+  static navigationOptions = {
+    title: I18n.t('handbook'),
+    headerStyle: {
+      backgroundColor: '#EE1800',
+    },
+    headerTintColor: '#ffffff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+  };
+
    showPokemonDetail = (pokemon) => {
        this.props.navigation.navigate('HandbookDetail', {pokemon:pokemon})
    };
