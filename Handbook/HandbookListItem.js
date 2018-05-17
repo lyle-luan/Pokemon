@@ -31,7 +31,7 @@ export class HandbookListItem extends React.Component {
     let pokemon = this.state.pokemon;
 
     return (
-      <TouchableHighlight style={{flex:1}} onPress={this.showPokemonDetail}>
+      <TouchableHighlight style={{flex:1, backgroundColor:'white'}} onPress={this.showPokemonDetail}>
         <View style={{flex:1, flexDirection:'row'}}>
           <Image source={{uri: pokemon.image}} style={{width: 90, height: 90}} />
           <View style={{flex:1, flexDirection:'column', justifyContent: 'center'}}>

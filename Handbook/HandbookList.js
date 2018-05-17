@@ -4,11 +4,27 @@ import I18n from '../i18n/i18n';
 import {HandbookListItem} from './HandbookListItem';
 import Generation from '../PokemonData/Generation.json';
 import {createStackNavigator,} from 'react-navigation';
+import {HandbookHeader,} from './HandbookHeader';
 
 export class HandbookList extends React.Component{
 
    showPokemonDetail = (pokemon) => {
        this.props.navigation.navigate('HandbookDetail', {pokemon:pokemon})
+   };
+
+   renderItemSeparatorComponent = () => {
+     return (
+       <View style={{flexDirection:'row', justifyContent:'flex-end', height: 1, backgroundColor: '#white'}}>
+         <View style={{flex:0.24, height:1, backgroundColor: 'white'}}></View>
+         <View style={{flex:0.76, height:1, backgroundColor: '#E9E9E9'}}></View>
+       </View>
+     );
+   };
+
+   sectionHeader = (item) => {
+     return (
+       <HandbookHeader title={item.section.title} />
+     );
    };
 
   render () {
@@ -19,8 +35,9 @@ export class HandbookList extends React.Component{
             {title: I18n.t('gen_one'), data: Generation.gen_one},
             {title: I18n.t('gen_two'), data: Generation.gen_two},
           ]}
+          ItemSeparatorComponent = {this.renderItemSeparatorComponent}
           renderItem={({item})=><HandbookListItem pokemonID={item.key} handler={this.showPokemonDetail.bind(this)}/>}
-          renderSectionHeader={({section})=><Text style={styles.sectionHeader}>{section.title}</Text>} />
+          renderSectionHeader={this.sectionHeader} />
       </View>
     );
   }
@@ -29,6 +46,7 @@ export class HandbookList extends React.Component{
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'white',
   },
   sectionHeader: {
     fontSize: 14,
