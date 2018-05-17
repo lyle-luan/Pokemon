@@ -38,8 +38,8 @@ const styles = StyleSheet.create({
     fontWeight:'normal',
   },
   detail: {
-    color:'#888888',
-    fontSize:15,
-    fontWeight:'normal'
+    color:'#353535',
+    fontSize:20,
+    fontWeight:'100'
   },
 });
