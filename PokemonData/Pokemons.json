@@ -36,7 +36,7 @@
     "id": "a002_miaowacao",
     "name": "a002_miaowacao",
     "image": "a002_miaowacao",
-    "sn": "001",
+    "sn": "002",
     "type": ["grass", "poison"],
     "race_value": {
       "hp": 60,
@@ -54,7 +54,7 @@
     "id": "a003_miaowahua",
     "name": "a003_miaowahua",
     "image": "a003_miaowahua",
-    "sn": "001",
+    "sn": "003",
     "type": ["grass", "poison"],
     "race_value": {
       "hp": 80,
@@ -72,7 +72,7 @@
     "id": "a004_xiaohuolong",
     "name": "a004_xiaohuolong",
     "image": "a004_xiaohuolong",
-    "sn": "001",
+    "sn": "004",
     "type": ["fire"],
     "race_value": {
       "hp": 39,
@@ -90,7 +90,7 @@
     "id": "a152_juyecao",
     "name": "a152_juyecao",
     "image": "a152_juyecao",
-    "sn": "001",
+    "sn": "152",
     "type": ["grass"],
     "race_value": {
       "hp": 45,
@@ -108,7 +108,7 @@
     "id": "a153_yueguiye",
     "name": "a153_yueguiye",
     "image": "a153_yueguiye",
-    "sn": "001",
+    "sn": "153",
     "type": ["grass"],
     "race_value": {
       "hp": 60,
@@ -126,7 +126,7 @@
     "id": "a154_dazhukui",
     "name": "a154_dazhukui",
     "image": "a154_dazhukui",
-    "sn": "001",
+    "sn": "154",
     "type": ["grass"],
     "race_value": {
       "hp": 80,
@@ -144,7 +144,7 @@
     "id": "a155_huoqiushu",
     "name": "a155_huoqiushu",
     "image": "a155_huoqiushu",
-    "sn": "001",
+    "sn": "155",
     "type": ["fire"],
     "race_value": {
       "hp": 39,
