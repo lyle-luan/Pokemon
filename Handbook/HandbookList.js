@@ -14,7 +14,7 @@ export class HandbookList extends React.Component{
 
    renderItemSeparatorComponent = () => {
      return (
-       <View style={{flexDirection:'row', justifyContent:'flex-end', height: 1, backgroundColor: '#white'}}>
+       <View style={{flexDirection:'row', justifyContent:'flex-end', height: 1, backgroundColor: 'white'}}>
          <View style={{flex:0.24, height:1, backgroundColor: 'white'}}></View>
          <View style={{flex:0.76, height:1, backgroundColor: '#E9E9E9'}}></View>
        </View>

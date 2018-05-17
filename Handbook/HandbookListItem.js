@@ -32,11 +32,11 @@ export class HandbookListItem extends React.Component {
 
     return (
       <TouchableHighlight style={{flex:1, backgroundColor:'white'}} onPress={this.showPokemonDetail}>
-        <View style={{flex:1, flexDirection:'row', justifyContent:'center', height: 90}}>
+        <View style={{flex:1, flexDirection:'row', justifyContent:'flex-start', alignItems:'center', height: 90, backgroundColor: 'white'}}>
           <Image source={{uri: pokemon.image}} style={{left:5, width: 80, height: 80}} />
-          <View style={{flex:1, flexDirection:'column', justifyContent: 'center', left:5}}>
-            <Text style={{flex:1, color:'#353535', fontSize:20, fontWeight:'normal'}}>{I18n.t(pokemon.name)}</Text>
-            <Text style={{flex:1, color:'#888888', fontSize:15, fontWeight:'normal'}}>{I18n.t('race_value') + pokemon.raceValue}</Text>
+          <View style={{flex:1, flexDirection:'column', justifyContent: 'space-between', left:10}}>
+            <Text style={{color:'#353535', fontSize:20, fontWeight:'normal'}}>{I18n.t(pokemon.name)}</Text>
+            <Text style={{color:'#888888', fontSize:15, fontWeight:'normal'}}>{I18n.t('race_value') + pokemon.raceValue}</Text>
             <TypesView style={{flex:1}} types={pokemon.type}/>
           </View>
           <View style={{flex:1, flexDirection:'column',alignItems:'flex-end'}}>
