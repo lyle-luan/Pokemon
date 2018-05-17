@@ -57,7 +57,7 @@ export class HandbookDetail extends React.Component{
 
     return (
       <View style={{flex:1, backgroundColor: 'white'}}>
-        <ScrollView style={styles.container}>
+        <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
           <View style={{flexDirection: 'row', justifyContent: 'center'}}>
             <Image source={{uri: pokemon.image}} style={{width: 180, height: 180}} />
           </View>

@@ -7,23 +7,26 @@ const rowHeight = 30;
 class HeaderView extends React.Component {
   render () {
     return (
-      <View style={{flex:1, flexDirection: 'row'}}>
-        <View style={{flex:6}}>
-          <Text>{I18n.t('race_value')}</Text>
-        </View>
-        <View style={{flex:4, flexDirection: 'column'}}>
-          <View style={{flex:1}}>
-            <Text>{I18n.t('statistic_range')}</Text>
+      <View style={{flex:1, flexDirection: 'column', height: 88}}>
+        <View style={{flexDirection: 'row', alignItems: 'flex-start', height: 88}}>
+          <View style={{flex:6, flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: 88, borderColor: '#E9E9E9', borderBottomWidth: 1, borderRightWidth: 1, borderStyle: 'solid'}}>
+            <Text style={{color:'#353535', fontSize:20, fontWeight:'normal'}}>{I18n.t('race_value')}</Text>
           </View>
-          <View style={{flex:1, flexDirection: 'row'}}>
-            <View style={{flex:1}}>
-              <Text>{I18n.t('level50')}</Text>
+          <View style={{flex:4, flexDirection: 'column'}}>
+            <View style={{flex:1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center', borderColor: '#E9E9E9', borderStyle: 'solid', borderBottomWidth: 1}}>
+              <Text style={{color:'#353535', fontSize:20, fontWeight:'normal'}}>{I18n.t('statistic_range')}</Text>
             </View>
-            <View style={{flex:1}}>
-              <Text>{I18n.t('level100')}</Text>
+            <View style={{flex:1, flexDirection: 'row', borderBottomWidth: 1, borderColor: '#E9E9E9', borderStyle: 'solid'}}>
+              <View style={{flex:1, flexDirection: 'column', justifyContent: 'center', alignItems:'center', borderColor: '#E9E9E9', borderRightWidth: 1, borderStyle: 'solid'}}>
+                <Text style={{color:'#353535', fontSize:15, fontWeight:'normal'}}>{I18n.t('level50')}</Text>
+              </View>
+              <View style={{flex:1, flexDirection: 'column', justifyContent: 'center', alignItems:'center'}}>
+                <Text style={{color:'#353535', fontSize:15, fontWeight:'normal'}}>{I18n.t('level100')}</Text>
+              </View>
             </View>
           </View>
         </View>
+        <View style={{flex:1, height:1, backgroundColor: '#E9E9E9'}}></View>
       </View>
     );
   }
