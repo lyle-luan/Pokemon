@@ -43,9 +43,9 @@ class RaceValueBar extends React.Component {
         <View style={{width:60, flexDirection: 'column', justifyContent: 'center', alignItems:'flex-end'}}>
           <Text style={{color:'#353535', fontSize:15, fontWeight:'normal'}} numberOfLines={1}>{title+': '+value}</Text>
         </View>
-        <View style={{flex:1,flexDirection: 'row'}}>
-          <View style={{flex:value, backgroundColor: color}}></View>
-          <View style={{flex:clearValue, backgroundColor:'white'}}></View>
+        <View style={{flex:1,flexDirection: 'row',left:2}}>
+          <View style={{flex:value, top:5, height:24, backgroundColor: color}}></View>
+          <View style={{flex:clearValue, right:2, backgroundColor:'white'}}></View>
         </View>
       </View>
     );
@@ -138,12 +138,12 @@ export class RaceValueCell extends React.Component {
     return (
       <View style={{flex:1, flexDirection: 'column'}}>
         <HeaderView style={{flex:2}} />
-        <RowView style={{flex:1}} title={'HP'} isHP={true} race_value={hp} color={'red'} />
-        <RowView style={{flex:1}} title={'attack'} isHP={false} race_value={attack} color={'red'} />
-        <RowView style={{flex:1}} title={'defense'} isHP={false} race_value={defense} color={'red'} />
-        <RowView style={{flex:1}} title={'sp_atk'} isHP={false} race_value={sp_atk} color={'red'} />
-        <RowView style={{flex:1}} title={'sp_def'} isHP={false} race_value={sp_def} color={'red'} />
-        <RowView style={{flex:1}} title={'speed'} isHP={false} race_value={speed} color={'red'} />
+        <RowView style={{flex:1}} title={'HP'} isHP={true} race_value={hp} color={'#8CC45B'} />
+        <RowView style={{flex:1}} title={'attack'} isHP={false} race_value={attack} color={'#F2C64A'} />
+        <RowView style={{flex:1}} title={'defense'} isHP={false} race_value={defense} color={'#D3853F'} />
+        <RowView style={{flex:1}} title={'sp_atk'} isHP={false} race_value={sp_atk} color={'#56B2BD'} />
+        <RowView style={{flex:1}} title={'sp_def'} isHP={false} race_value={sp_def} color={'#598FC8'} />
+        <RowView style={{flex:1}} title={'speed'} isHP={false} race_value={speed} color={'#A25BCC'} />
         <View style={{height:34, flexDirection: 'row', justifyContent: 'flex-start', alignItems:'center', borderColor: '#E9E9E9', borderBottomWidth: 1, borderStyle: 'solid'}}>
           <Text style={{color:'#353535', fontSize:15, fontWeight:'normal'}}>{I18n.t('total')+': '+total}</Text>
         </View>
