@@ -1,6 +1,6 @@
 export default {
-  gen_one: '第一世代',
-  gen_two: '第二世代',
+  gen_one: '关都图鉴',
+  gen_two: '城都图鉴',
 
   handbook: '图鉴',
 
@@ -33,6 +33,7 @@ export default {
   sp_def: '特防',
   speed: '速度',
   total: '总和',
+  be_struck: '被攻击受到伤害',
 
 
   sp_atk: '特攻',
@@ -48,9 +49,24 @@ export default {
 
   a001_miaowazhongzi_sex_diff: '妙蛙种子没有性别差别',
 
-  grass: '草',
+  normal: '一般',
+  fighting: '格斗',
+  flying: '飞行',
   poison: '毒',
+  ground: '地面',
+  rock: '岩石',
+  bug: '虫',
+  ghost: '幽灵',
+  steel: '钢',
   fire: '火',
+  water: '水',
+  grass: '草',
+  electric: '电',
+  psychic: '超能力',
+  ice: '冰',
+  dragon: '龙',
+  dark: '恶',
+  fairy: '妖精',
 
   overgrow: '茂盛',
   chlorophyll: '叶绿素',

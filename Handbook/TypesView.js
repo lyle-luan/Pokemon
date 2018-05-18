@@ -64,13 +64,58 @@ const styles = StyleSheet.create({
     textShadowRadius:2,
     textAlign: 'center',
   },
-  grass: {
-    backgroundColor: '#77CC55',
+  normal: {
+    backgroundColor: '#BBBBAB',
+  },
+  fighting: {
+    backgroundColor: '#B95547',
+  },
+  flying: {
+    backgroundColor: '#699BFC',
   },
   poison: {
-    backgroundColor: 'purple',
+    backgroundColor: '#A95798',
+  },
+  ground: {
+    backgroundColor: '#DCBA5D',
+  },
+  rock: {
+    backgroundColor: '#BAA96A',
+  },
+  bug: {
+    backgroundColor: '#AAB933',
+  },
+  ghost: {
+    backgroundColor: '#6668B9',
+  },
+  steel: {
+    backgroundColor: '#AAAABA',
   },
   fire: {
-    backgroundColor: 'red',
+    backgroundColor: '#FC462F',
+  },
+  water: {
+    backgroundColor: '#3A9BFC',
+  },
+  grass: {
+    backgroundColor: '#7ACA5C',
+  },
+  electric: {
+    backgroundColor: '#FECB45',
+  },
+  psychic: {
+    backgroundColor: '#FC5899',
+  },
+  ice: {
+    backgroundColor: '#7BDDFD',
+  },
+  dragon: {
+    backgroundColor: '#776BEB',
+  },
+  dark: {
+    backgroundColor: '#765545',
+  },
+  fairy: {
+    backgroundColor: '#FEACFD',
   },
 })

@@ -8,6 +8,7 @@ import {TextTouchableCell} from './DetailCells/TextTouchableCell'
 import Pokemons from '../PokemonData/Pokemons.json';
 import {EvolutionCell} from './DetailCells/EvolutionCell'
 import {RaceValueCell} from './DetailCells/RaceValueCell'
+import {BeStruckCell} from './DetailCells/BeStruckCell'
 
 export class HandbookDetail extends React.Component{
 
@@ -79,6 +80,8 @@ export class HandbookDetail extends React.Component{
           <TextCell title={'weight'} detail={pokemon.weight} />
           <RaceValueCell hp={pokemon.race_value.hp} attack={pokemon.race_value.attack} defense={pokemon.race_value.defense} sp_atk={pokemon.race_value.sp_atk} sp_def={pokemon.race_value.sp_def} speed={pokemon.race_value.speed} />
           <EvolutionCell pokemonID={pokemon.evolution} />
+          <TextCell title={'be_struck'} detail={''} />
+          <BeStruckCell types={pokemon.be_struck}/>
         </ScrollView>
       </View>
     );
