@@ -9,10 +9,7 @@ export class EvolutionCell extends React.Component {
   render () {
     let pokemonID = this.props.pokemonID;
     let evolutionAarry = Evolution[pokemonID];
-
     let pokemon = Pokemons[pokemonID];
-
-    console.log('====>pokemonID:'+ pokemonID);
 
     return (
       <View style={styles.container}>
@@ -24,9 +21,18 @@ export class EvolutionCell extends React.Component {
         {
           evolutionAarry.map((evolution)=>(
             <View style={{flex:1, flexDirection: 'column'}}>
-              <Text>{I18n.t('level')+evolution.level}</Text>
-              <Text>{evolution.carry_item}</Text>
-              <Text>{evolution.condition}</Text>
+              <View style={{flexDirection: 'row'}}>
+                <View>
+                  <Image />
+                </View>
+                <View style={{flexDirection: 'column', justifyContent: 'flex-start'}}>
+                  <Text>{I18n.t('level')+evolution.level}</Text>
+                  <Text>{'草之石'}</Text>
+                  <Text>{'发电厂'}</Text>
+                  {/* <Text>{evolution.carry_item}</Text>
+                  <Text>{evolution.condition}</Text> */}
+                </View>
+              </View>
               <HandbookListItem pokemonID={evolution.pokemon_id} />
               <View style={{flex:1, flexDirection: 'row',}}>
                 <View style={{width:90, height:1, backgroundColor: 'white'}}></View>
