@@ -8,10 +8,11 @@ class BeStruckRow extends React.Component {
     let type = this.props.type;
     let value = this.props.value;
     return (
-      <View style={{flex:1, flexDirection: 'row', height: 44}}>
+      <View style={{height: 44, flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center',left:5}}>
         <TypesView types={[type]}/>
-        <Text>{value}</Text>
-        {/* <View style={{flex:1, height:1, backgroundColor: '#E9E9E9'}}></View> */}
+        <View style={{flex:1, flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-end'}}>
+          <Text style={{color:'#353535', fontSize:20, fontWeight:'100', right:10}}>{value}</Text>
+        </View>
       </View>
     );
   }
@@ -40,7 +41,7 @@ export class BeStruckCell extends React.Component {
 
     return (
       <View style={{flex:1, flexDirection: 'row'}}>
-        <View style={{flexDirection: 'column', justifyContent: 'flex-start'}}>
+        <View style={{flex:1, flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start'}}>
           <BeStruckRow type={'normal'} value={normal} />
           <BeStruckRow type={'fighting'} value={fighting} />
           <BeStruckRow type={'flying'} value={flying} />
@@ -51,7 +52,8 @@ export class BeStruckCell extends React.Component {
           <BeStruckRow type={'ghost'} value={ghost} />
           <BeStruckRow type={'steel'} value={steel} />
         </View>
-        <View style={{flexDirection: 'column', justifyContent: 'flex-start'}}>
+        <View style={{width:1, backgroundColor: '#E9E9E9'}}></View>
+        <View style={{flex:1, flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start'}}>
           <BeStruckRow type={'fire'} value={fire} />
           <BeStruckRow type={'water'} value={water} />
           <BeStruckRow type={'grass'} value={grass} />
