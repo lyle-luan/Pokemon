@@ -8,7 +8,7 @@ class BeStruckRow extends React.Component {
     let type = this.props.type;
     let value = this.props.value;
     return (
-      <View style={{height: 44, flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center',left:5}}>
+      <View style={{flex:1, height: 44, flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', left: 5}}>
         <TypesView types={[type]}/>
         <View style={{flex:1, flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-end'}}>
           <Text style={{color:'#353535', fontSize:20, fontWeight:'100', right:10}}>{value}</Text>
@@ -40,30 +40,61 @@ export class BeStruckCell extends React.Component {
     let fairy = this.props.types['fairy'];
 
     return (
-      <View style={{flex:1, flexDirection: 'row'}}>
-        <View style={{flex:1, flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start'}}>
+      <View style={{flex:1, flexDirection: 'column'}}>
+        <View style={{flexDirection: 'row'}}>
           <BeStruckRow type={'normal'} value={normal} />
-          <BeStruckRow type={'fighting'} value={fighting} />
-          <BeStruckRow type={'flying'} value={flying} />
-          <BeStruckRow type={'poison'} value={poison} />
-          <BeStruckRow type={'ground'} value={ground} />
-          <BeStruckRow type={'rock'} value={rock} />
-          <BeStruckRow type={'bug'} value={bug} />
-          <BeStruckRow type={'ghost'} value={ghost} />
-          <BeStruckRow type={'steel'} value={steel} />
-        </View>
-        <View style={{width:1, backgroundColor: '#E9E9E9'}}></View>
-        <View style={{flex:1, flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start'}}>
+          <View style={{width:1, backgroundColor: '#E9E9E9'}}></View>
           <BeStruckRow type={'fire'} value={fire} />
+        </View>
+        <View style={{height:1, backgroundColor: '#E9E9E9'}}></View>
+        <View style={{flexDirection: 'row'}}>
+          <BeStruckRow type={'fighting'} value={fighting} />
+          <View style={{width:1, backgroundColor: '#E9E9E9'}}></View>
           <BeStruckRow type={'water'} value={water} />
+        </View>
+        <View style={{height:1, backgroundColor: '#E9E9E9'}}></View>
+        <View style={{flexDirection: 'row'}}>
+          <BeStruckRow type={'flying'} value={flying} />
+          <View style={{width:1, backgroundColor: '#E9E9E9'}}></View>
           <BeStruckRow type={'grass'} value={grass} />
+        </View>
+        <View style={{height:1, backgroundColor: '#E9E9E9'}}></View>
+        <View style={{flexDirection: 'row'}}>
+          <BeStruckRow type={'poison'} value={poison} />
+          <View style={{width:1, backgroundColor: '#E9E9E9'}}></View>
           <BeStruckRow type={'electric'} value={electric} />
+        </View>
+        <View style={{height:1, backgroundColor: '#E9E9E9'}}></View>
+        <View style={{flexDirection: 'row'}}>
+          <BeStruckRow type={'ground'} value={ground} />
+          <View style={{width:1, backgroundColor: '#E9E9E9'}}></View>
           <BeStruckRow type={'psychic'} value={psychic} />
+        </View>
+        <View style={{height:1, backgroundColor: '#E9E9E9'}}></View>
+        <View style={{flexDirection: 'row'}}>
+          <BeStruckRow type={'rock'} value={rock} />
+          <View style={{width:1, backgroundColor: '#E9E9E9'}}></View>
           <BeStruckRow type={'ice'} value={ice} />
+        </View>
+        <View style={{height:1, backgroundColor: '#E9E9E9'}}></View>
+        <View style={{flexDirection: 'row'}}>
+          <BeStruckRow type={'bug'} value={bug} />
+          <View style={{width:1, backgroundColor: '#E9E9E9'}}></View>
           <BeStruckRow type={'dragon'} value={dragon} />
+        </View>
+        <View style={{height:1, backgroundColor: '#E9E9E9'}}></View>
+        <View style={{flexDirection: 'row'}}>
+          <BeStruckRow type={'ghost'} value={ghost} />
+          <View style={{width:1, backgroundColor: '#E9E9E9'}}></View>
           <BeStruckRow type={'dark'} value={dark} />
+        </View>
+        <View style={{height:1, backgroundColor: '#E9E9E9'}}></View>
+        <View style={{flexDirection: 'row'}}>
+          <BeStruckRow type={'steel'} value={steel} />
+          <View style={{width:1, backgroundColor: '#E9E9E9'}}></View>
           <BeStruckRow type={'fairy'} value={fairy} />
         </View>
+        <View style={{height:1, backgroundColor: '#E9E9E9'}}></View>
       </View>
     );
   }
