@@ -22,15 +22,21 @@ export class EvolutionCell extends React.Component {
           evolutionAarry.map((evolution)=>(
             <View style={{flex:1, flexDirection: 'column'}}>
               <View style={{flexDirection: 'row'}}>
-                <View>
-                  <Image />
+                <View style={{width: 45, flexDirection: 'column', justifyContent: 'center', alignItems:'center'}}>
+                  <Text style={{color:'#353535', fontSize:15, fontWeight:'normal'}}>{'↓'}</Text>
                 </View>
-                <View style={{flexDirection: 'column', justifyContent: 'flex-start'}}>
+                <View style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center'}}>
                   <Text>{I18n.t('level')+evolution.level}</Text>
-                  <Text>{'草之石'}</Text>
-                  <Text>{'发电厂'}</Text>
-                  {/* <Text>{evolution.carry_item}</Text>
-                  <Text>{evolution.condition}</Text> */}
+                  {(() => {
+                    if (evolution.carry_item) {
+                      <Text>{evolution.carry_item}</Text>
+                    }
+                  })()}
+                  {(() => {
+                    if (evolution.condition) {
+                      <Text>{evolution.condition}</Text>
+                    }
+                  })()}
                 </View>
               </View>
               <HandbookListItem pokemonID={evolution.pokemon_id} />
