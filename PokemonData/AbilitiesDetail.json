@@ -1,0 +1,9 @@
+{
+  "stench": {
+    "introduce": "stench_introduce",
+    "in_battle": "stench_in_battle",
+    "out_battle": "stench_out_battle",
+    "pokemons": ["a044_chouchouhua", "a088_chouni", "a_089chouchouni", "a_434chouyoupu", "a_435tankechouyou", "a_568popodai", "569_huichenshan"],
+    "classify": "out_battle"
+  }
+}
