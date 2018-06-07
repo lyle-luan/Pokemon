@@ -23,6 +23,8 @@
     "egg_groups": ["monster", "egg_grass"],
     "hatch_time_cycle": "20",
     "hatch_time_step": "5,120",
+    "is_no_gender": "false",
+    "is_unknown_gender": "false",
     "gender_ratio_male": "87.5",
     "gender_ratio_female": "12.5",
     "sex_diff": "sex_diff",
